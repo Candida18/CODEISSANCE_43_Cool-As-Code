@@ -45,6 +45,13 @@
                                         </div>
                                     </form>
                                 </div>
+
+                              
+
+
+                            </li>
+                            <li style="margin-top:20px">
+                                <div id="google_translate_element"></div>
                             </li>
                             <li class="nav-item dropdown no-arrow mx-1">
                                 <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#"><span class="badge bg-danger badge-counter">3+</span><i class="fas fa-bell fa-fw"></i></a>
@@ -271,6 +278,14 @@
             </footer>
         </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
     </div>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+        }
+        </script>
+        
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        
     <script src="{% static 'assets/bootstrap/js/bootstrap.min.js' %}"></script>
     <script src="{% static 'assets/js/bs-init.js' %}"></script>
     <script src="{% static 'assets/js/theme.js' %}"></script>
