@@ -8,21 +8,53 @@
     }
 </style>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+<script>
+  function GeneratePDF(){
+    var element = document.getElementById('printpdf');
+    var opt = {
+      margin:       0,
+      filename:     'myfile.pdf',
+      image:        { type: 'jpeg', quality: 1 },
+      html2canvas:  { scale: 5 },
+      jsPDF:        { unit: 'cm', format: 'letter', orientation: 'portrait' }
+    };
+    
+    // New Promise-based usage:
+    html2pdf().from(element).set(opt).save();
+    
+    // Old monolithic-style usage:
+    html2pdf(element, opt);
+  }
+</script>
 
 <div id = 'printpdf'>
     <h1>Valerie Luna</h1>
     <h3>vallune123@gmail.com</h3><h3>99209922333</h3>
     <br><br>
     <div id = "first-certificate">
-        <h5>Course Name: React Course (Basics)</h5>
+        <h4>Course Name: React Course (Basics)</h4>
         <h5>Uploaded by : Sam Wilson</h5>
         <p>This course was to explain the basics of react and its installation. It also covers basic functions like states and props throughly</p>
+        <p> ◉ This is another key feature</p>
+        <p> ◉ This is another key feature</p>
+
     </div>
     <div id = "second-certificate">
-        <h5>Course Name: Digital marketting</h5>
+        <h4>Course Name: Digital marketting</h4>
         <h5>Uploaded by : Stanford University</h5>
         <p>This course was to explain the fundamentals of digital marketting while also diving deeper into social media mangament and instagram marketting</p>
+        <p> ◉ This is another key feature</p>
+        <p> ◉ This is another key feature</p>
     </div>
 </div>
+<style>
+    .printer{
+        margin-left:30px; 
+        margin-top:10px;
+        
+    }
+</style>
+<button class="printer" onclick="GeneratePDF()"> Print resume</button>
 {% endblock %}
