@@ -19,5 +19,7 @@ urlpatterns = [
     path('jobs.html', views.jobs),
     path('trackCourse.html', views.trackCourse),
     path('index.html', views.logout_view),
+    path('resume.html', views.resume),
+
 
 ]

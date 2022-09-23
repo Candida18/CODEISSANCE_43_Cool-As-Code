@@ -122,6 +122,9 @@ def chat(request):
 def candidates(request):
     return render(request, "candidates.html")
 
+def resume(request):
+    return render(request, "resume.html")
+
 
 f = open(r"C:\Users\noron\CODEISSANCE_43_Cool-As-Code\mysite\myapps\dataset\data.json")
 data = json.load(f)
