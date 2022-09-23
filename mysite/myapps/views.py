@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from .forms import SignUpForm, LoginForm
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 
 
 def home_page(request):
@@ -83,4 +83,10 @@ def jobs(request):
 
 
 def trackCourse(request):
+    
     return render(request, 'trackCourse.html')
+
+
+def logout_view(request):
+    logout(request)
+    return redirect('home.html')
