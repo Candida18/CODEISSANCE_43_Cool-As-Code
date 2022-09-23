@@ -71,11 +71,7 @@ def table(request):
 
 def addCourse(request):
 
-<<<<<<< Updated upstream
 
-=======
-<<<<<<< HEAD
->>>>>>> Stashed changes
     if request.method == "POST":
         # form = AddCourse(request.POST)
         # if form.is_valid():
@@ -84,7 +80,7 @@ def addCourse(request):
     else:
         form = AddCourse()
     return render(request, "addCourse.html", {"form": form})
-=======
+
     # form = AddCourse(request.POST)
     # if request.method == 'POST':
         # form = AddCourse(request.POST)
@@ -102,7 +98,7 @@ def addCourse(request):
 
    
 
->>>>>>> 229a879e699aebcc70a7f0232dc30bed94a534ef
+
 
     
     if request.method == 'POST':
