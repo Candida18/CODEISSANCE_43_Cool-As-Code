@@ -31,6 +31,10 @@
     // Old monolithic-style usage:
     html2pdf(element, opt);
   }
+
+  function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+  }
 </script>
 
 <div id = 'printpdf'>
@@ -40,6 +44,7 @@
     <div id = "first-certificate">
         <h4>Course Name: React Course (Basics)</h4>
         <h5>Uploaded by : Sam Wilson</h5>
+        <span class="courseid"></span>
         <p>This course was to explain the basics of react and its installation. It also covers basic functions like states and props throughly</p>
         <p> ◉ This is another key feature</p>
         <p> ◉ This is another key feature</p>
