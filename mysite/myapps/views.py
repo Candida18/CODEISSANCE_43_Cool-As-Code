@@ -1,5 +1,7 @@
+
+
 from django.shortcuts import render, redirect
-from .forms import SignUpForm, LoginForm
+from .forms import SignUpForm, LoginForm, AddCourse
 from django.contrib.auth import authenticate, login, logout
 import json
 from django.http import JsonResponse
@@ -54,6 +56,10 @@ def register_user(request):
     return render(request,'register_user.html', {'form': form, 'msg': msg})
 
 
+def trackCourse(request):
+    return render(request, 'trackCourse.html')
+
+
 def profile(request):
     return render(request, 'profile.html')
 
@@ -63,7 +69,14 @@ def table(request):
 
 
 def addCourse(request):
-    return render(request, 'addCourse.html')
+    if request.method == 'POST':
+        # form = AddCourse(request.POST)
+        # if form.is_valid():
+            return redirect('trackCourse.html')
+    else:
+        form = AddCourse()
+    return render(request, 'addCourse.html', {'form': form})
+   
 
 
 def chat(request):
@@ -75,18 +88,18 @@ def candidates(request):
 
 
 def explore(request):
-    f = open(r'C:\Users\noron\CODEISSANCE_43_Cool-As-Code\mysite\myapps\dataset\data.json')
+    f = open(
+        r'C:\Users\noron\CODEISSANCE_43_Cool-As-Code\mysite\myapps\dataset\data.json')
     data = json.load(f)
 
     # for i in data['test1']:
     #     print(i)
-  
+
     # # # Closing file
     # # f.close()
 
     print(data)
 
-    
     return render(request, "explore.html", data)
 
 
@@ -96,11 +109,6 @@ def host(request):
 
 def jobs(request):
     return render(request, 'jobs.html')
-
-
-def trackCourse(request):
-    
-    return render(request, 'trackCourse.html')
 
 
 def logout_view(request):

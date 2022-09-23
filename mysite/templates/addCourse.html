@@ -1,17 +1,56 @@
 {% extends "./base.html" %}
 {% block content %}
-<form action="">
-    <input type="text" id="fname" name="fname" onclick="othername();"><br>
-    <script>
+{% load static %}
+<form class="course" method="post">
+    <!-- <input type="text" id="fname" name="fname" onclick="othername();"><br> -->
+    {% csrf_token %}
+    <div class = "container" style="width: 80%; margin: auto;">
+    <div class="row mb-6">
+    <div class="mb-3 ">
+      <label>Title</label>
+          <input class="form-control form-control-user" type="text" name = "course_type"> 
+          {% comment %} {{ form.course_type }} {% endcomment %}
+    </div>
+    <div class="mb-3">
+      <label>Author</label>
+        <input class="form-control form-control-user" type="text" name="course_name"> 
+        {% comment %}{{ form.course_name }} {% endcomment %}
+    </div>
+    <div class="mb-3">
+      <label>Course type</label>
+        <input class="form-control form-control-user" type="text" name="course_author"> 
+        {% comment %}{{ form.course_author }} {% endcomment %}
+    </div>
+
+    <div class="mb-3">
+      <label>Content Of Course</label>
+        <input class="form-control form-control-user" type="text" name="students"> 
+        {% comment %}{{ form.students }} {% endcomment %}
+    </div>
+
+    </div>
+
+    <!-- <script>
         
         let loop_limit = document.getElementById("fname").value;
         document.write().innerHTML(loop_limit)
         console.log(loop_limit)
 
+    </script> -->
 
-    </script>
+    
 
-    <input type="submit" value="Submit">
+    <button class="btn btn-primary d-block btn-user w-100" type="submit">Submit</button>
   </form> 
 
+  <!-- <object style="height: 390px; width: 640px">
+      <param name="movie" value="http://www.youtube.com/v/v1gTI4BOPUw?version=3">
+      <param name="allowFullScreen" value="true">
+      <param name="allowScriptAccess" value="always">
+      <embed src="http://www.youtube.com/v/v1gTI4BOPUw?version=3" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="640" height="390">
+  </object> -->
+<script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
 {% endblock%}
