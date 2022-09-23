@@ -10,20 +10,20 @@
       {% comment %} <h2>PORTFOLIO</h2> {% endcomment %}
     </div>
 
-    {% comment %} <div class="filters">
+   <div class="filters">
       <ul>
         <li class="active" data-filter="*">All</li>
-        <li data-filter=".software">Corporate</li>
-        <li data-filter=".personal">Personal</li>
-        <li data-filter=".agency">Agency</li>
-        <li data-filter=".portal">Portal</li>
+        <li data-filter=".software">Software</li>
+        <li data-filter=".business">Business</li>
+        <li data-filter=".softskills">Soft Skills</li>
+        <li data-filter=".webinars">Webinars</li>
       </ul>
-    </div> {% endcomment %}
+    </div> 
 
     <div class="filters-content">
       <div class="row grid">
         {% for data in test1 %}
-        <div class="col-sm-4 all {{data.course_type}}">
+        <div class="col-sm-4 all business ">
           <div class="item">
             <img
               src="https://i.picsum.photos/id/923/1000/1200.jpg?hmac=aTXp3_sl8AMqNddbsjWOIy6R8-RCLWB5GoFrQUWIusA"
