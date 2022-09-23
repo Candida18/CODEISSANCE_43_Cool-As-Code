@@ -22,8 +22,10 @@
 
     <div class="filters-content">
       <div class="row grid">
+       
         {% for data in test1 %}
         <div class="col-sm-4 all business ">
+          <button type="submit">
           <div class="item">
             <img
               src="https://i.picsum.photos/id/923/1000/1200.jpg?hmac=aTXp3_sl8AMqNddbsjWOIy6R8-RCLWB5GoFrQUWIusA"
@@ -34,6 +36,7 @@
               <div class="cat" >{{data.course_type}}</div>
             </div>
           </div>
+        </button>
         </div>
         {% comment %} <div class="col-sm-4 all personal">
           <div class="item">
@@ -72,6 +75,7 @@
           </div>
         </div>{% endcomment %}
         {% endfor %}
+      
       </div>
     </div>
   </div>

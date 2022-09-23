@@ -1,0 +1,58 @@
+{% extends "./base.html" %}
+{% load static %}
+{% block content %}
+
+<!-- partial:index.partial.html -->
+<section class="portfolio section">
+  <div class="container">
+    <div class="top-side">
+      <h4 class="title">new</h4>
+      {% comment %} <h2>PORTFOLIO</h2> {% endcomment %}
+    </div>
+
+  
+
+    <div class="filters-content">
+      <div class="row grid">
+       
+        <div class="col-sm-4 all business ">
+           
+          <div class="item">
+            <img
+              src="https://i.picsum.photos/id/923/1000/1200.jpg?hmac=aTXp3_sl8AMqNddbsjWOIy6R8-RCLWB5GoFrQUWIusA"
+              alt="Work 1"
+            />
+            <div class="p-inner">
+              <h5></h5>
+              <div class="cat" ></div>
+            </div>
+          </div>
+        
+        </div>
+       
+      
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+    $('.filters ul li').click(function(){
+        $('.filters ul li').removeClass('active');
+        $(this).addClass('active');
+        
+        var data = $(this).attr('data-filter');
+        $grid.isotope({
+          filter: data
+        })
+      });
+      
+      var $grid = $(".grid").isotope({
+        itemSelector: ".all",
+        percentPosition: true,
+        masonry: {
+          columnWidth: ".all"
+        }
+      })
+</script>
+
+{% endblock %}
