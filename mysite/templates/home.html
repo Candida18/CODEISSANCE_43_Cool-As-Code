@@ -49,9 +49,14 @@
             <div class="site-logo">
               <a href="index.html" class="text-black"><span class="text-primary">teacHER</a>
             </div>
+             <div id="google_translate_element" class="nav-link" style="margin-left:370px;"></div>
             
               <nav class="site-navigation text-center ml-auto" role="navigation">
+                
                 <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
+                 
+                  
+                 
                   <li><a href="#home-section" class="nav-link">Home</a></li>
                   <li><a href="#donate-section" class="nav-link">Donate</a></li>
                   <li><a href="#contact-section" class="nav-link">Contact</a></li>
@@ -476,6 +481,14 @@
     </footer>
 
   </div>
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+    }
+    </script>
+    
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
   <script src="{% static 'assets/js/jquery-3.3.1.min.js' %}"></script>
   <script src="{% static 'assets/js/jquery-ui.js' %}"></script>
   <script src="{% static 'assets/js/popper.min.js' %}"></script>
