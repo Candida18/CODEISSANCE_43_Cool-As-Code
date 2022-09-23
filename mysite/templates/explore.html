@@ -10,32 +10,32 @@
       <h2>PORTFOLIO</h2>
     </div>
 
-    <div class="filters">
+    {% comment %} <div class="filters">
       <ul>
         <li class="active" data-filter="*">All</li>
-        <li data-filter=".corporate">Corporate</li>
+        <li data-filter=".software">Corporate</li>
         <li data-filter=".personal">Personal</li>
         <li data-filter=".agency">Agency</li>
         <li data-filter=".portal">Portal</li>
       </ul>
-    </div>
+    </div> {% endcomment %}
 
     <div class="filters-content">
       <div class="row grid">
         {% for data in test1 %}
-        <div class="col-sm-4 all corporate">
+        <div class="col-sm-4 all {{data.course_type}}">
           <div class="item">
             <img
               src="https://i.picsum.photos/id/923/1000/1200.jpg?hmac=aTXp3_sl8AMqNddbsjWOIy6R8-RCLWB5GoFrQUWIusA"
               alt="Work 1"
             />
             <div class="p-inner">
-              <h5>Work 1</h5>
+              <h5>{{data.course_name}}</h5>
               <div class="cat" >{{data.course_type}}</div>
             </div>
           </div>
         </div>
-        <div class="col-sm-4 all personal">
+        {% comment %} <div class="col-sm-4 all personal">
           <div class="item">
             <img
               src="https://i.picsum.photos/id/1014/1000/1600.jpg?hmac=J7nIoCc0sqwy89muMNzuYWzK3UcBlAAraWUGR1r6X4U"
@@ -46,7 +46,7 @@
               <div class="cat">Personal</div>
             </div>
           </div>
-        </div>
+        </div> 
         <div class="col-sm-4 all agency">
           <div class="item">
             <img
@@ -70,7 +70,7 @@
               <div class="cat">Portal</div>
             </div>
           </div>
-        </div>
+        </div>{% endcomment %}
         {% endfor %}
       </div>
     </div>
