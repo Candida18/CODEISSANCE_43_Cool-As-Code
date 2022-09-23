@@ -69,14 +69,15 @@ def table(request):
 
 
 def addCourse(request):
+    # form = AddCourse(request.POST)
     if request.method == 'POST':
         # form = AddCourse(request.POST)
         # if form.is_valid():
+            # course = form.save()
             return redirect('trackCourse.html')
     else:
         form = AddCourse()
     return render(request, 'addCourse.html', {'form': form})
-   
 
 
 def chat(request):
