@@ -69,25 +69,24 @@ def table(request):
 
 
 def addCourse(request):
-<<<<<<< Updated upstream
+
     # form = AddCourse(request.POST)
-    if request.method == 'POST':
+    # if request.method == 'POST':
         # form = AddCourse(request.POST)
         # if form.is_valid():
             # course = form.save()
-=======
+
     if request.method == 'POST':
         # form = AddCourse(request.POST)
         # if form.is_valid():
->>>>>>> Stashed changes
-            return redirect('trackCourse.html')
+
+        return redirect('trackCourse.html')
     else:
         form = AddCourse()
     return render(request, 'addCourse.html', {'form': form})
-<<<<<<< Updated upstream
-=======
+
    
->>>>>>> Stashed changes
+
 
 
 def chat(request):
