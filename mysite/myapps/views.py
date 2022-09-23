@@ -6,6 +6,8 @@ from django.contrib.auth import authenticate, login, logout
 def home_page(request):
     return render(request, 'index.html')
 
+def home(request):
+    return render(request, 'home.html')
 
 def dashboard(request):
     return render(request, 'index.html')
