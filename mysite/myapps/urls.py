@@ -8,4 +8,11 @@ urlpatterns = [
     path('profile.html', views.profile),
     path('table.html', views.table),
     path('index.html', views.dashboard),
+    path('addCourse.html', views.addCourse),
+    path('chat.html', views.chat),
+    path('candidates.html', views.candidates),
+    path('explore.html', views.explore),
+    path('host.html', views.host),
+    path('jobs.html', views.jobs),
+    path('trackCourse.html', views.trackCourse),
 ]

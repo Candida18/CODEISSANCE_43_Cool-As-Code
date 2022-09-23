@@ -50,3 +50,31 @@ def profile(request):
 
 def table(request):
     return render(request, 'table.html')
+
+
+def addCourse(request):
+    return render(request, 'addCourse.html')
+
+
+def chat(request):
+    return render(request, 'chat.html')
+
+
+def candidates(request):
+    return render(request, 'candidates.html')
+
+
+def explore(request):
+    return render(request, 'explore.html')
+
+
+def host(request):
+    return render(request, 'host.html')
+
+
+def jobs(request):
+    return render(request, 'jobs.html')
+
+
+def trackCourse(request):
+    return render(request, 'trackCourse.html')
