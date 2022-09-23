@@ -1,7 +1,9 @@
 from django.shortcuts import render, redirect
 from .forms import SignUpForm, LoginForm
 from django.contrib.auth import authenticate, login, logout
-
+import json
+from django.http import JsonResponse
+from django.http import HttpResponse
 
 def home_page(request):
     return render(request, 'home.html')
@@ -73,7 +75,19 @@ def candidates(request):
 
 
 def explore(request):
-    return render(request, 'explore.html')
+    f = open(r'C:\Users\noron\CODEISSANCE_43_Cool-As-Code\mysite\myapps\dataset\data.json')
+    data = json.load(f)
+
+    # for i in data['test1']:
+    #     print(i)
+  
+    # # # Closing file
+    # # f.close()
+
+    print(data)
+
+    
+    return render(request, "explore.html", data)
 
 
 def host(request):

@@ -13,7 +13,7 @@ urlpatterns = [
     path('addCourse.html', views.addCourse),
     path('chat.html', views.chat),
     path('candidates.html', views.candidates),
-    path('explore.html', views.explore),
+    path('explore.html', views.explore,name="explore"),
     path('host.html', views.host),
     path('jobs.html', views.jobs),
     path('trackCourse.html', views.trackCourse),
