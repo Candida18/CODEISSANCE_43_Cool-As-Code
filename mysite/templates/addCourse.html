@@ -1,3 +1,17 @@
 {% extends "./base.html" %}
 {% block content %}
+<form action="">
+    <input type="text" id="fname" name="fname" onclick="othername();"><br>
+    <script>
+        
+        let loop_limit = document.getElementById("fname").value;
+        document.write().innerHTML(loop_limit)
+        console.log(loop_limit)
+
+
+    </script>
+
+    <input type="submit" value="Submit">
+  </form> 
+
 {% endblock%}
