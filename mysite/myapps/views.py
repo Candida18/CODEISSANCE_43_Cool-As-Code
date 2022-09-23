@@ -19,9 +19,15 @@ def login_user(request):
             username = form.cleaned_data.get('username')
             password = form.cleaned_data.get('password')
             user = authenticate(username = username, password=password)
-            if user is not None:
+            if user is not None and user.is_learner:
                 login(request, user)
-                return redirect('home_page')
+                return redirect('profile.html')
+            elif user is not None and user.is_course:
+                login(request, user)
+                return redirect('trackCourse.html')
+            elif user is not None and user.is_recruiter:
+                login(request, user)
+                return redirect('candidates.html')
             else:
                 msg = 'invalid credentials'
         else:
