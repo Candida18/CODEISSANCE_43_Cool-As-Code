@@ -167,10 +167,10 @@ def resume(request):
 
 
 #WE NEED TO CONSTANTLY CHANGE PATH FOR ALL COMPUTERS
-<<<<<<< Updated upstream
 
 
 
+f = open(r"C:\Users\Lenovo\Documents\GitHub\CODEISSANCE_43_Cool-As-Code\mysite\myapps\dataset\data.json")
 
 
 f = open(r"C:\Users\noron\CODEISSANCE_43_Cool-As-Code\mysite\myapps\dataset\data.json")
@@ -178,11 +178,13 @@ f = open(r"C:\Users\noron\CODEISSANCE_43_Cool-As-Code\mysite\myapps\dataset\data
 # f = open(r"C:\Users\Sachi\Documents\GitHub\CODEISSANCE_43_Cool-As-Code\mysite\myapps\dataset\data.json")
 
 
-=======
-f = open(r"C:\Users\Sachi\Documents\GitHub\CODEISSANCE_43_Cool-As-Code\mysite\myapps\dataset\data.json")
 
-# f = open(r"C:\Users\noron\CODEISSANCE_43_Cool-As-Code\mysite\myapps\dataset\data.json")
->>>>>>> Stashed changes
+f = open(r"C:\Users\Sachi\Documents\GitHub\CODEISSANCE_43_Cool-As-Code\mysite\myapps\dataset\data.json")
+#f = open(r"C:\Users\noron\CODEISSANCE_43_Cool-As-Code\mysite\myapps\dataset\data.json")
+
+
+
+#f = open(r"C:\Users\Sachi\Documents\GitHub\CODEISSANCE_43_Cool-As-Code\mysite\myapps\dataset\data.json")
 
 data = json.load(f)
 
