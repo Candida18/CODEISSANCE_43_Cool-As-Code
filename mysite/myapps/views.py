@@ -126,7 +126,7 @@ def resume(request):
     return render(request, "resume.html")
 
 #WE NEED TO CONSTANTLY CHANGE PATH FOR ALL COMPUTERS
-f = open(r"C:\Users\Lenovo\Documents\GitHub\CODEISSANCE_43_Cool-As-Code\mysite\myapps\dataset\data.json")
+f = open(r"C:\Users\noron\CODEISSANCE_43_Cool-As-Code\mysite\myapps\dataset\data.json")
 data = json.load(f)
 
 

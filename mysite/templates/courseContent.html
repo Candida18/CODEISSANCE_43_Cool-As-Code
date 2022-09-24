@@ -1,16 +1,30 @@
-<div class="card">
-    <div class="card-img-holder">
-      <img src="https://images.unsplash.com/photo-1640102953836-5651f5d6b240?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1024&q=80" alt="Blog image">
-    </div>
-    <h3 class="blog-title">Learn Microinteraction</h3>
-    <span class="blog-time">Monday Jan 20, 2020</span>
-    <p class="description">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sagittis viverra turpis, non cursus ex accumsan at.
-    </p>
-    <div class="options">
-      <span>
-        Read Full Blog
-      </span>
-      <button class="btn">Blog</button>
+{% extends "./base.html" %}
+{% load static %}
+{% block content %}
+
+   
+<div class="site-section" id="blog-section">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-7 text-center mb-5 text-center">
+          <h2 class="text-black text-uppercase section-title">Our Blog</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati ab possimus fugiat, autem aliquid, commodi quod voluptatum consectetur.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div style="margin-left:auto; margin-right:auto;">
+            <a href="single.html" class="mb-4 d-block"><img src="{% static 'assets/img/hero_1_no-text.jpg' %}" alt="Image" class="img-fluid rounded"></a>
+            <h2 >Python And Django Framework For Beginners Complete Course</h2>
+            <p class="text-muted mb-3 text-uppercase small"><span class="mr-2">January 18, 2022</span> By <a href="single.html" class="by">Horizon Tech</a></p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat et suscipit iste libero neque. Vitae quidem ducimus voluptatibus nemo cum odio ab enim nisi, itaque, libero fuga veritatis culpa quis!</p>
+            <p><a href="single.html">Get Started</a></p>
+          </p>
+        </div>
+       
+
+      </div>
     </div>
   </div>
+  
+{% endblock %}
