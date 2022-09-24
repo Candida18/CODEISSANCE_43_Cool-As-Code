@@ -43,7 +43,7 @@ def login_user(request):
                 return redirect("trackCourse.html")
             elif user is not None and user.is_recruiter:
                 login(request, user)
-                return redirect("candidates.html")
+                return redirect("employees.html")
             else:
                 msg = "invalid credentials"
         else:
@@ -157,9 +157,11 @@ def addCourse(request):
 def chat(request):
     return render(request, "chat.html")
 
+def applicants(request):
+    return render(request, "applicants.html")
 
-def candidates(request):
-    return render(request, "candidates.html")
+def employees(request):
+    return render(request, "employees.html")
 
 def resume(request):
     return render(request, "resume.html")
@@ -173,9 +175,9 @@ def resume(request):
 #f = open(r"C:\Users\Lenovo\Documents\GitHub\CODEISSANCE_43_Cool-As-Code\mysite\myapps\dataset\data.json")
 
 
-f = open(r"C:\Users\noron\CODEISSANCE_43_Cool-As-Code\mysite\myapps\dataset\data.json")
+# f = open(r"C:\Users\noron\CODEISSANCE_43_Cool-As-Code\mysite\myapps\dataset\data.json")
 
-# f = open(r"C:\Users\Sachi\Documents\GitHub\CODEISSANCE_43_Cool-As-Code\mysite\myapps\dataset\data.json")
+f = open(r"C:\Users\Sachi\Documents\GitHub\CODEISSANCE_43_Cool-As-Code\mysite\myapps\dataset\data.json")
 
 
 
