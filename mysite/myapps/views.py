@@ -5,6 +5,15 @@ import json
 from django.http import JsonResponse
 from django.http import HttpResponse
 
+import json as simplejson
+
+from django.middleware.csrf import CsrfViewMiddleware
+from django.views.decorators.csrf import csrf_exempt
+
+# from django_remote_forms.forms import RemoteForm
+from myapps.forms import AddCourse
+
+
 
 def home_page(request):
     return render(request, "home.html")
@@ -72,30 +81,60 @@ def table(request):
 def addCourse(request):
 
 
-    if request.method == "POST":
-        # form = AddCourse(request.POST)
-        # if form.is_valid():
+    # if request.method == "POST":
+    #     form = AddCourse(request.POST)
+    #     # if form.is_valid():
 
-        return redirect("trackCourse.html")
-    else:
-        form = AddCourse()
-    return render(request, "addCourse.html", {"form": form})
+    #     #return redirect("trackCourse.html")
+    #     render(request, "addCourse.html", {"form": form})
+    # else:
+    #     form = AddCourse()
+    # return render(request, "addCourse.html", {"form": form})
 
-    # form = AddCourse(request.POST)
+    # # form = AddCourse(request.POST)
+    # # if request.method == 'POST':
+    #     # form = AddCourse(request.POST)
+    #     # if form.is_valid():
+    #         # course = form.save()
+
     # if request.method == 'POST':
-        # form = AddCourse(request.POST)
-        # if form.is_valid():
-            # course = form.save()
+    #     # form = AddCourse(request.POST)
+    #     # if form.is_valid():
 
-    if request.method == 'POST':
-        # form = AddCourse(request.POST)
-        # if form.is_valid():
+    #     return redirect('trackCourse.html')
+    # else:
+    #     form = AddCourse()
+    # return render(request, 'addCourse.html', {'form': form})
 
-        return redirect('trackCourse.html')
-    else:
-        form = AddCourse()
-    return render(request, 'addCourse.html', {'form': form})
+    # csrf_middleware = CsrfViewMiddleware()
 
+    # response_data = {}
+    # if request.method == 'GET':
+    #     # Get form definition
+    #     form = AddCourse()
+    # elif request.raw_post_data:
+    #     request.POST = json.loads(request.raw_post_data)
+    #     # Process request for CSRF
+    #     csrf_middleware.process_view(request, None, None, None)
+    #     form_data = request.POST.get('data', {})
+    #     form = AddCourse(form_data)
+    #     if form.is_valid():
+    #         form.save()
+
+    # remote_form = RemoteForm(form)
+    # # Errors in response_data['non_field_errors'] and response_data['errors']
+    # response_data.update(remote_form.as_dict())
+    # data["test1"].append(response_data)
+    # response = HttpResponse(
+    #     json.dumps(data, cls=DjangoJSONEncoder),
+    #     mimetype="application/json"
+    # )
+
+
+
+    # # Process response for CSRF
+    # csrf_middleware.process_response(request, response)
+    # return response
    
 
 
@@ -128,18 +167,16 @@ def resume(request):
 
 
 #WE NEED TO CONSTANTLY CHANGE PATH FOR ALL COMPUTERS
-<<<<<<< Updated upstream
+
 
 
 
 
 f = open(r"C:\Users\noron\CODEISSANCE_43_Cool-As-Code\mysite\myapps\dataset\data.json")
 
-=======
-f = open(r"C:\Users\Sachi\Documents\GitHub\CODEISSANCE_43_Cool-As-Code\mysite\myapps\dataset\data.json")
+# f = open(r"C:\Users\Sachi\Documents\GitHub\CODEISSANCE_43_Cool-As-Code\mysite\myapps\dataset\data.json")
 
-# f = open(r"C:\Users\noron\CODEISSANCE_43_Cool-As-Code\mysite\myapps\dataset\data.json")
->>>>>>> Stashed changes
+
 
 data = json.load(f)
 
