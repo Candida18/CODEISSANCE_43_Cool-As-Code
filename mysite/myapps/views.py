@@ -157,6 +157,8 @@ def addCourse(request):
 def chat(request):
     return render(request, "chat.html")
 
+def applicants(request):
+    return render(request, "applicants.html")
 
 def employees(request):
     return render(request, "employees.html")
