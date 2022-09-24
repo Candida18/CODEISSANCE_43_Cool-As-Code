@@ -172,7 +172,7 @@ def resume(request):
 
 
 
-#f = open(r"C:\Users\Lenovo\Documents\GitHub\CODEISSANCE_43_Cool-As-Code\mysite\myapps\dataset\data.json")
+f = open(r"C:\Users\Lenovo\Documents\GitHub\CODEISSANCE_43_Cool-As-Code\mysite\myapps\dataset\data.json")
 
 
 # f = open(r"C:\Users\noron\CODEISSANCE_43_Cool-As-Code\mysite\myapps\dataset\data.json")
@@ -209,9 +209,12 @@ def host(request):
     return render(request, "host.html")
 
 
+
 def jobs(request):
     return render(request, "jobs.html")
 
+def feedback(request):
+    return render(request, "feedback.html")
 
 def logout_view(request):
     logout(request)

@@ -21,6 +21,8 @@ urlpatterns = [
     path('trackCourse.html', views.trackCourse),
     path('index.html', views.logout_view),
     path('resume.html', views.resume),
+    path('feedback.html', views.feedback),
+
 
 
 ]
