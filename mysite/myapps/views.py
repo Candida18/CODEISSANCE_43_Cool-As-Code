@@ -43,7 +43,7 @@ def login_user(request):
                 return redirect("trackCourse.html")
             elif user is not None and user.is_recruiter:
                 login(request, user)
-                return redirect("candidates.html")
+                return redirect("employees.html")
             else:
                 msg = "invalid credentials"
         else:
@@ -158,8 +158,8 @@ def chat(request):
     return render(request, "chat.html")
 
 
-def candidates(request):
-    return render(request, "candidates.html")
+def employees(request):
+    return render(request, "employees.html")
 
 def resume(request):
     return render(request, "resume.html")
