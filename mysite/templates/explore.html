@@ -16,7 +16,7 @@
         <li data-filter=".software">Software</li>
         <li data-filter=".business">Business</li>
         <li data-filter=".softskills">Soft Skills</li>
-        <li data-filter=".webinars">Webinars</li>
+        
       </ul>
     </div> 
 
@@ -24,19 +24,59 @@
       <div class="row grid">
        
         {% for data in test1 %}
-        <div class="col-sm-4 all business ">
-          <button type="submit">
+        {% if data.course_type == "Software" %}
+        <div class="col-sm-4 all software">
+         
           <div class="item">
             <img
-              src="https://i.picsum.photos/id/923/1000/1200.jpg?hmac=aTXp3_sl8AMqNddbsjWOIy6R8-RCLWB5GoFrQUWIusA"
+              src="https://www.techgropse.com/blog/wp-content/uploads/2020/10/image-1-1.png"
               alt="Work 1"
             />
             <div class="p-inner">
               <h5>{{data.course_name}}</h5>
               <div class="cat" >{{data.course_type}}</div>
             </div>
-          </div>
-        </button>
+        </div>
+          {% elif data.course_type == "Business" %}
+          <div class="col-sm-4 all business">
+          
+            <div class="item">
+              <img
+                src="https://cdn.infoset.app/blog/2021-06-10/6685.jpg"
+                alt="Work 1"
+              />
+              <div class="p-inner">
+                <h5>{{data.course_name}}</h5>
+                <div class="cat" >{{data.course_type}}</div>
+              </div>
+            </div>
+            {% elif data.course_type == "Soft Skills" %}
+            <div class="col-sm-4 all softskills">
+            
+              <div class="item">
+                <img
+                  src="https://assets.entrepreneur.com/content/3x2/2000/1638079565-Untitleddesign-2021-11-28T100532825.png?auto=webp&quality=95&crop=16:9&width=675"
+                  alt="Work 1"
+                />
+                <div class="p-inner">
+                  <h5>{{data.course_name}}</h5>
+                  <div class="cat" >{{data.course_type}}</div>
+                </div>
+            </div>
+              {% else %}
+              <div class="col-sm-4 all">
+              
+                <div class="item">
+                  <img
+                    src="https://media.istockphoto.com/photos/people-with-vr-grasses-playing-virtual-reality-game-future-digital-picture-id1324380506?k=20&m=1324380506&s=170667a&w=0&h=YIfQSLHpSgP0HsgfZM0pD5hfyS5pePI5T0Gtj-PXzWM="
+                    alt="Work 1"
+                  />
+                  <div class="p-inner">
+                    <h5>{{data.course_name}}</h5>
+                    <div class="cat" >{{data.course_type}}</div>
+                  </div>
+                </div>
+          {% endif %}
         </div>
         {% comment %} <div class="col-sm-4 all personal">
           <div class="item">
