@@ -1,3 +1,106 @@
 {% extends "./base.html" %}
+{% load static %}
 {% block content %}
+
+<!-- partial:index.partial.html -->
+<section class="portfolio section">
+    <div class="container">
+        <div class="top-side">
+            <h4 class="title">Explore Courses</h4>
+            {% comment %} <h2>PORTFOLIO</h2> {% endcomment %}
+        </div>
+
+        <div class="filters">
+            <ul>
+                <li class="active" data-filter="*">All</li>
+                <li data-filter=".digitalmarketing">Digital Marketing</li>
+                <li data-filter=".dataentry">Data Entry</li>
+                <li data-filter=".softwareintern">Software Intern</li>
+
+            </ul>
+        </div>
+
+    <div class="filters-content">
+      <div class="row grid">
+        <div class="col-sm-4 all digitalmarketing">
+          <div class="item">
+            <img src="https://leverageedublog.s3.ap-south-1.amazonaws.com/blog/wp-content/uploads/2020/06/05174400/Types-of-Digital-Marketing.png" alt="Work 1">
+            <div class="p-inner">
+              <h5>Social Media Marketing</h5>
+              <div class="cat">Digital Marketing</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 all dataentry">
+          <div class="item">
+            <img src="https://dynamic.placementindia.com/blog_images/20200921152020_image1.jpg" alt="Work 1">
+            <div class="p-inner">
+              <h5>Student Data Entry</h5>
+              <div class="cat">Data Entry</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 all softwareintern">
+          <div class="item">
+            <img src="https://image.shutterstock.com/image-vector/application-smartphone-business-graph-analytics-260nw-1583248045.jpg" alt="Work 1">
+            <div class="p-inner">
+              <h5>Front-end Developer</h5>
+              <div class="cat">Software Intern</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-4 all softwareintern">
+          <div class="item">
+            <img src="https://image.shutterstock.com/image-vector/application-smartphone-business-graph-analytics-260nw-1583248045.jpg" alt="Work 1">
+            <div class="p-inner">
+              <h5>Front-end Developer</h5>
+              <div class="cat">Software Intern</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-4 all digitalmarketing">
+          <div class="item">
+            <img src="https://leverageedublog.s3.ap-south-1.amazonaws.com/blog/wp-content/uploads/2020/06/05174400/Types-of-Digital-Marketing.png" alt="Work 1">
+            <div class="p-inner">
+              <h5>Social Media Marketing</h5>
+              <div class="cat">Digital Marketing</div>
+            </div>
+          </div>
+</div>
+        <div class="col-sm-4 all dataentry">
+          <div class="item">
+            <img src="https://dynamic.placementindia.com/blog_images/20200921152020_image1.jpg" alt="Work 1">
+            <div class="p-inner">
+              <h5>Student Data Entry</h5>
+              <div class="cat">Data Entry</div>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div>
+    </div>
+</section>
+<script>
+    $('.filters ul li').click(function () {
+        $('.filters ul li').removeClass('active');
+        $(this).addClass('active');
+
+        var data = $(this).attr('data-filter');
+        $grid.isotope({
+            filter: data
+        })
+    });
+
+    var $grid = $(".grid").isotope({
+        itemSelector: ".all",
+        percentPosition: true,
+        masonry: {
+            columnWidth: ".all"
+        }
+    })
+</script>
+
 {% endblock %}
